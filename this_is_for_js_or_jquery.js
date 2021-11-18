@@ -1,8 +1,14 @@
-$(document).ready(function () {
-    var autocomplete;
-    autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+  $(document).ready(function () {
+    var searchInput = "search_input"    
+    loadGooglePlaces((document.getElementById(searchInput)), {
         types: ['geocode'],
     });
-    // $(document.getElementById(searchInput)).val('test') 
   });
-//---------- google api
+
+  $(document).ready(function () {
+    const searchInput = document.querySelector('.autocomplete');    
+    loadGooglePlaces(searchInput, {
+        types: ['geocode'],
+    });
+  });
+//---------- google api this is for ID, if a new item will be generated need to change it to class
