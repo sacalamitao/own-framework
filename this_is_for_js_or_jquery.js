@@ -32,6 +32,21 @@ $(document).on 'keyup', '.numbersOnly', ->
     @value = @value.replace(/\.(?=.*\.)/g, '')
   return 
 
+$(document).on 'keyup', '.numbersOnly', ->
+  if @value != @value.replace(/[^0-9\.]*\.[0-9]{3}$/g, '')
+    @value = @value.replace(/[^0-9\.]*\.[0-9]{3}$/g, '')
+  return
+
+
+$(document).on 'keyup', '.numbersOnly', ->
+  if @value != @value.replace(/\.(?=.*\.)/g, '')
+    @value = @value.replace(/\.(?=.*\.)/g, '')
+  return
+
+$(document).on 'keyup', '.numbersOnly', ->
+  if @value != @value.replace(/[^0-9\.]*\.[0-9]{3}$/g, '')
+    @value = @value.replace(/[^0-9\.]*\.[0-9]{3}$/g, '')
+  return
 
 
 // --------------------REGEX for one DOT only------------------
